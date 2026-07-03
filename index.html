@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inkwell Puzzles — Free Daily Word Games</title>
+<meta name="description" content="Play free word search, word scramble, and word-game trivia — new puzzles, no sign-up, works on any phone.">
+<link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3653361179163370"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><span class="stamp">IW</span> Inkwell Puzzles</div>
+    <nav class="site-nav">
+      <a href="index.html" class="current">Play</a>
+      <a href="blog.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Free · No sign-up · New puzzles</div>
+    <h1>
+      <span class="tiles">
+        <span class="tile" style="animation-delay:0s">I</span>
+        <span class="tile" style="animation-delay:.05s">N</span>
+        <span class="tile" style="animation-delay:.1s">K</span>
+      </span>
+      Word games for people who love letters.
+    </h1>
+    <p>Three puzzles, one page: hunt for hidden words, unscramble the mystery word, or test your word-game trivia. Pick a tab below and start playing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab-btn active" data-target="panel-ws">Word Search</button>
+      <button class="tab-btn" data-target="panel-scr">Scramble</button>
+      <button class="tab-btn" data-target="panel-quiz">Trivia Quiz</button>
+    </div>
+
+    <!-- WORD SEARCH -->
+    <div id="panel-ws" class="tab-panel active">
+      <div class="card">
+        <div class="section-head">
+          <h2>Word Search</h2>
+          <span class="tag">Drag to select</span>
+        </div>
+        <div id="ws-grid"></div>
+        <div class="status-row">
+          <span id="ws-status">0 found</span>
+        </div>
+        <div id="ws-wordlist"></div>
+        <div id="ws-win" class="win-banner">All words found! Reload the page for a fresh grid.</div>
+      </div>
+    </div>
+
+    <!-- SCRAMBLE -->
+    <div id="panel-scr" class="tab-panel">
+      <div class="card">
+        <div class="section-head">
+          <h2>Word Scramble</h2>
+          <span class="tag">Unscramble it</span>
+        </div>
+        <div class="scramble-word" id="scr-word">–</div>
+        <div class="scramble-hint" id="scr-hint">–</div>
+        <form class="scramble-form" id="scr-form">
+          <input type="text" id="scr-input" placeholder="Your answer" autocomplete="off">
+          <button type="submit" class="primary">Check</button>
+        </form>
+        <div class="status-row">
+          <span id="scr-feedback"></span>
+          <span id="scr-score" class="score">Score: 0</span>
+        </div>
+        <button class="ghost" id="scr-skip">Skip word</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="panel-quiz" class="tab-panel">
+      <div class="card">
+        <div class="section-head">
+          <h2>Word-Game Trivia</h2>
+          <span class="tag" id="quiz-progress">Question 1 / 5</span>
+        </div>
+        <p class="quiz-q" id="quiz-q">–</p>
+        <div class="quiz-options" id="quiz-opts"></div>
+        <div class="status-row">
+          <span id="quiz-score" class="score">Score: 0</span>
+        </div>
+        <div id="quiz-win" class="win-banner"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>© 2026 Inkwell Puzzles</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></span>
+  </div>
+</footer>
+
+<script src="games.js"></script>
+</body>
+</html>

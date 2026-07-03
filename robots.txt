@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amaarahmed806-rgb.github.io/word-games/sitemap.xml
