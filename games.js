@@ -66,11 +66,18 @@ function initWordSearch(){
       cell.className='ws-cell';
       cell.textContent=wsGrid[r][c];
       cell.dataset.r=r; cell.dataset.c=c;
-      cell.addEventListener('pointerdown', ()=>wsStart(cell));
-      cell.addEventListener('pointerenter', ()=>wsDrag(cell));
+      cell.addEventListener('pointerdown', (e)=>{ e.preventDefault(); wsStart(cell); });
       el.appendChild(cell);
     }
   }
+  el.addEventListener('pointermove', (e)=>{
+    if(!wsSelecting) return;
+    e.preventDefault();
+    const target = document.elementFromPoint(e.clientX, e.clientY);
+    if(target && target.classList && target.classList.contains('ws-cell')){
+      wsDrag(target);
+    }
+  });
   document.addEventListener('pointerup', wsEnd);
 
   const list=document.getElementById('ws-wordlist');
